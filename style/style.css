@@ -166,7 +166,7 @@ a {
 
 .img {
   display: inline-block;
-  /* width: 600px; */
+  width: 600px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -182,4 +182,43 @@ a {
   margin: 0px 0px 20px 0px;
   box-shadow: 2px 5px 4px 1px rgba(0, 0, 0, 0.3);
   z-index: 9;
+}
+
+.contain {
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: tomato;
+  text-align: center;
+  line-height: 180px;
+  font-size: 32px;
+  white-space: nowrap;
+}
+
+.contain.responsive {
+  max-width: 1140px;
+  margin-bottom: 40px;
+}
+
+.contain.adaptive {
+  max-width: 600px;
+}
+
+@media screen and (min-width: 900px) {
+  .contain {
+    background-color: green;
+  }
+
+  .contain.adaptive {
+    max-width: 900px;
+  }
+}
+
+@media screen and (min-width:1140px) {
+  .contain {
+    background-color: green;
+  }
+
+  .contain.adaptive {
+    max-width: 1140px;
+  }
 }
